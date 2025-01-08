@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="mn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Цаг Агаар</title>
+</head>
+
+<body>
+    <div class="main-container">
+        <!-- Next 3 Days Weather Section -->
+        <section class="forecast-box">
+            <article class="day" id="day-1">
+                <p class="date">Маргааш</p>
+                <img src="images/clear.png" alt="Маргаашийн цаг агаар">
+                <p class="temp">--°C</p>
+            </article>
+            <article class="day" id="day-2">
+                <p class="date">Нөгөөдөр</p>
+                <img src="images/clear.png" alt="Нөгөөдөрийн цаг агаар">
+                <p class="temp">--°C</p>
+            </article>
+            <article class="day" id="day-3">
+                <p class="date">Нөгөөдөрийн маргааш</p>
+                <img src="images/clear.png" alt="Нөгөөдөрийн маргаашийн цаг агаар">
+                <p class="temp">--°C</p>
+            </article>
+        </section>
+
+        <!-- Right Now's Weather Section -->
+        <section class="current-weather">
+            <div class="search-box">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <input type="text" placeholder="Байршлаа оруулна уу">
+                <button class="fa-solid fa-magnifying-glass" aria-label="Хайх"></button>
+            </div>
+
+            <div class="not-found">
+                <p>Уучлаарай! Байршил олдсонгүй :/</p>
+                <img src="images/404.png" alt="Байршил олдсонгүй">
+            </div>
+
+            <div class="weather-box">
+                <img src="images/clear.png" alt="Цаг агаар">
+                <p class="temperature">--°C</p>
+                <p class="'description">Өнөөдөр</p>
+                <p class="description">Мэдээлэл</p>
+            </div>
+
+            <div class="weather-details">
+                <div class="humidity">
+                    <i class="fa-solid fa-water" aria-hidden="true"></i>
+                    <div class="text">
+                        <span>--%</span>
+                        <p>Чийгшил</p>
+                    </div>
+                </div>
+                <div class="wind">
+                    <i class="fa-solid fa-wind" aria-hidden="true"></i>
+                    <div class="text">
+                        <span>--КМ/Цаг</span>
+                        <p>Салхины Хурд</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+
+</html>

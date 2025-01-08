@@ -1,0 +1,148 @@
+/* General styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #06283D;
+    --secondary-color: #ffffff;
+    --accent-color: #cdcdcd;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--primary-color);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Main container with two columns */
+.main-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    max-width: 900px;
+    background: var(--accent-color);
+    padding: 20px;
+    border-radius: 12px;
+}
+
+/* Left Side: Forecast Box */
+.forecast-box {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    background: var(--secondary-color);
+    padding: 10px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.forecast-box .day {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.forecast-box .day img {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+}
+
+.forecast-box .day .date, .forecast-box .day .temp {
+    font-size: 16px;
+    color: var(--primary-color);
+}
+
+/* Right Side: Current Weather Section */
+.current-weather {
+    width: 65%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.search-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.search-box button {
+    cursor: pointer;
+    padding: 10px;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-box button:hover {
+    background: #044563;
+}
+
+.not-found {
+    text-align: center;
+    display: none;
+    color: #000000;
+}
+
+.not-found img {
+    width: 50%;
+}
+
+.weather-box {
+    text-align: center;
+}
+
+.weather-box img {
+    width: 100px;
+    margin: 10px 0;
+}
+
+.weather-box .temperature {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.weather-box .description {
+    font-size: 1.2rem;
+}
+
+.weather-details {
+    display: flex;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .forecast-box, .current-weather {
+        width: 100%;
+    }
+}
