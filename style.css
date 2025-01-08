@@ -35,6 +35,7 @@ body {
 }
 
 /* Left Side: Forecast Box */
+/* Updated Forecast Box Styles */
 .forecast-box {
     width: 35%;
     display: flex;
@@ -44,6 +45,22 @@ body {
     padding: 10px;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+    /* Add scrollability */
+    max-height: 300px; /* Set a height to restrict the size */
+    overflow-y: auto; /* Enable vertical scrolling */
+}
+
+/* Optional: Add a scrollbar style for a more polished look */
+.forecast-box::-webkit-scrollbar {
+    width: 8px;
+}
+.forecast-box::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+.forecast-box::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
 
 .forecast-box .day {
